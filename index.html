@@ -14,34 +14,38 @@
 
 </head>
 <body>
-    <nav class="w-full bg-white p-4 flex justify-between
-    items-center rounder-b-2xl border-2 border-red-500">
-        <div class="flex tems-center gap-3">
-            <img class="w-20 h-20 rounded-full" src="assets/logo.png" alt="">
-            <h1 class="text-semibold text-2xl text-[#08704f]
-            mt-[5%]">Emergency <br> Service</h1>
+
+    <nav class="w-full bg-white p-4 flex justify-between items-center rounded-b-2xl">
+    <div class="flex items-center gap-3">
+        <img class="w-20 h-20 rounded-full" src="assets/logo.png" alt="">
+        <h1 class="font-semibold text-2xl text-[#08704f] leading-tight">
+            Emergency <br> Service
+        </h1>
+    </div>
+    <div class="flex items-center gap-8 text-lg font-semibold">
+        <div class="flex justify-center items-center gap-2
+        bg-green-200 rounded-3xl  w-20 h-10">
+            <span  id="heartCount">0</span>
+            <img class="w-5 h-5" src="assets/heart.png" alt="">
         </div>
 
-        <div class="flext items-center gap-5 text-lg
-         font-semibold">
-            <div class="flex items-center gap-2">
-                <img src="assets/heart.png"  alt="">
-                <span id="heartCount">0</span>
-            </div>
-        </div>
-           
-        <div class="flex items-center gap-3">
-            <img src="assets/coin.png" alt="">
+        <div class="flex justify-center items-center gap-2
+        bg-green-200 rounded-3xl  w-20 h-10">
             <span id="coinCount">100</span>
+            <img class="w-5 h-5" src="assets/coin.png" alt="">
+        </div>
+        <div class="flex items-center gap-2">
+           <button class="btn bg-green-500
+           rounded-3xl text-white flex-1">0 Copy</button>
         </div>
 
-        <div class="flex items-center gap-3">
-            <span id="copyCount">0 copy</span>
-        </div>
-    </nav>
+    </div>
+
+</nav>
+
 
     <section class="mt-6 text-white bg-[#013223]
-    border-2 border-yellow-500 justify-center items-center
+     justify-center items-center
     text-center">
         <img class="w-24 mx-auto mb-4" src="assets/logo.png" alt="">
         <h2 class="text-4xl font-extrabold">Emergency Service Directory</h2>
@@ -50,10 +54,11 @@
         </p>
     </section>
    <!-- main  -->
-    <main class="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
-        <!-- card-1 -->
-      <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4">
+    <main class="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10 p-4">
+        
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3
+      gap-6 lg:col-span-3">
+      <!-- Card-1 -->
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex justify-between items-center mb-3">
@@ -62,7 +67,6 @@
           <i class="fa-regular fa-heart"></i>
           </button>
       </div>
-
 
            <h3 class="text-xl font-bold"> National Emergency</h3>
            <p class="text-gray-500 text-sm">Emergency Hotline</p>
@@ -77,12 +81,13 @@
        </div>
 
         </div>
+   
 
-        </div>
+
+        
 
         <!-- card-2 -->
-     <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+     
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -107,10 +112,9 @@
 
         </div>
 
-        </div>
+        
         <!-- card-3 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -135,10 +139,9 @@
 
         </div>
 
-        </div>
+        
         <!-- car-4 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+        
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -163,10 +166,9 @@
 
         </div>
 
-        </div>
+        
         <!-- card-5 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -191,10 +193,9 @@
 
         </div>
 
-        </div>
+        
         <!-- card-6 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -219,10 +220,9 @@
 
         </div>
 
-        </div>
+        
         <!-- card-7 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -247,10 +247,9 @@
 
         </div>
 
-        </div>
+        
         <!-- card-8 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
@@ -275,10 +274,9 @@
 
         </div>
 
-        </div>
+       
         <!-- card-9 -->
-         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
-        xl:grid-cols-3 gap-6 p-4"> -->
+         
         <div class="bg-white shadow-xl p-5 rounder-2xl hover:
         scale-[1.02] duration-150">
       <div class="flex items-center justify-between mb-3">
