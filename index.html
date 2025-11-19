@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency HotLine</title>
+    <!-- tailwind cnd  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisyui cnd  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Font awesome cnd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+    <nav class="w-full bg-white p-4 flex justify-between
+    items-center rounder-b-2xl border-2 border-red-500">
+        <div class="flex tems-center gap-3">
+            <img class="w-20 h-20 rounded-full" src="assets/logo.png" alt="">
+            <h1 class="text-semibold text-2xl text-[#08704f]
+            mt-[5%]">Emergency <br> Service</h1>
+        </div>
+
+        <div class="flext items-center gap-5 text-lg
+         font-semibold">
+            <div class="flex items-center gap-2">
+                <img src="assets/heart.png"  alt="">
+                <span id="heartCount">0</span>
+            </div>
+        </div>
+           
+        <div class="flex items-center gap-3">
+            <img src="assets/coin.png" alt="">
+            <span id="coinCount">100</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <span id="copyCount">0 copy</span>
+        </div>
+    </nav>
+
+    <section class="mt-6 text-white bg-[#013223]
+    border-2 border-yellow-500 justify-center items-center
+    text-center">
+        <img class="w-24 mx-auto mb-4" src="assets/logo.png" alt="">
+        <h2 class="text-4xl font-extrabold">Emergency Service Directory</h2>
+        <p class="mt-2 text-lg">Government Emergency Service at Your Fingertip - 
+            A Project by Government of the People's Republic of Bangladesh
+        </p>
+    </section>
+   <!-- main  -->
+    <main class="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
+        <!-- card-1 -->
+      <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4">
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex justify-between items-center mb-3">
+          <img class="w-10" src="assets/emergency.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold"> National Emergency</h3>
+           <p class="text-gray-500 text-sm">Emergency Hotline</p>
+           <p class="text-3xl font-extrabold mt-3">999</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">All</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('999')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('National Emergency', '999')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+
+        <!-- card-2 -->
+     <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/police.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Police Helpline Number</h3>
+           <p class="text-gray-500 text-sm">Emergency Hotline</p>
+           <p class="text-3xl font-extrabold mt-3">999</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Police</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('999')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Police Helpline', '999')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-3 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/fire-service.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Fire Service Number</h3>
+           <p class="text-gray-500 text-sm">Fire Service</p>
+           <p class="text-3xl font-extrabold mt-3">999</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Fire</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('999')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('National Emergency', '999')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- car-4 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/ambulance.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Ambulance Service</h3>
+           <p class="text-gray-500 text-sm">Ambulance</p>
+           <p class="text-3xl font-extrabold mt-3">1994-999999</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Health</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('1994-999999')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Ambulance', '1994-999999')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-5 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/Women & Child Helpline.jpeg" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Women & Child Helpline</h3>
+           <p class="text-gray-500 text-sm">Women & Child Helpline</p>
+           <p class="text-3xl font-extrabold mt-3">181</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Help</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('181')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Women & Child Helpline', '181')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-6 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/Anti-Corruption Helpline.jpeg" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Anti-Corruption Helpline</h3>
+           <p class="text-gray-500 text-sm">Anti-Corruption</p>
+           <p class="text-3xl font-extrabold mt-3">1031</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Govt.</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('1031')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Anti-Corruption', '1031')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-7 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/electrical.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Electricity Helpline</h3>
+           <p class="text-gray-500 text-sm">Electricity Outage</p>
+           <p class="text-3xl font-extrabold mt-3">16216</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Electricity</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('16216')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Electricity Helpline', '16216')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-8 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/brac.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Brac Helpline</h3>
+           <p class="text-gray-500 text-sm">Brac</p>
+           <p class="text-3xl font-extrabold mt-3">16445</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">NGO</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('16445')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Brac Helpline', '16445')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+        <!-- card-9 -->
+         <!-- <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2
+        xl:grid-cols-3 gap-6 p-4"> -->
+        <div class="bg-white shadow-xl p-5 rounder-2xl hover:
+        scale-[1.02] duration-150">
+      <div class="flex items-center justify-between mb-3">
+          <img class="w-10" src="assets/Bangladesh-Railway.png" alt="">
+          <button onclick="increaseHear()" class="text-gray-300 hover:text-red-500 text-2xl">
+          <i class="fa-regular fa-heart"></i>
+          </button>
+      </div>
+
+
+           <h3 class="text-xl font-bold">Bangladesh-Railway Helpline</h3>
+           <p class="text-gray-500 text-sm">Bangladesh Railway</p>
+           <p class="text-3xl font-extrabold mt-3">1031</p>
+           <span class="px-3 py-1 bg-green-100 text-green-700 
+        rounded-full text-sm mt-2 inline-block">Travel</span>
+           <div class="flex gap-3 mt-4">
+            <button onclick="copyNumber ('163')"
+            class="btn bg-gray-300 text-black flex-1">Copy</button>
+            <button onclick="makeCall('Bangladesh Railway', '163')" 
+            class="btn bg-green-500 text-white flex-1">Call</button>
+       </div>
+
+        </div>
+
+        </div>
+
+        <!-- history  -->
+         <div class="bg-white shadow-3xl p-5 h-fit">
+            <div class="flex justify-between items-center mb-4">
+               <h3 class="text-lg font-bold flex items-center gap-2">
+               <span>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                </span>
+                 Call History
+               </h3>
+
+           <button class="btn bg-green-500 text-white"
+            onclick="clearHistory()">Clear</button>
+        </div>
+
+        <ul id="historyList" class="space-y-3 text-gray-700 text-sm"></ul>
+    </div>
+    
+
+
+    </main>
+    
+</body>
+</html>
