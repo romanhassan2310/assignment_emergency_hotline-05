@@ -8,7 +8,6 @@ function increaseHeart (){
     .innerText =hearts
 }
 
-
 function copyNumber (num){
     navigator.clipboard.writeText(num);
     alert("Number Copied:" + num);
@@ -17,6 +16,7 @@ function copyNumber (num){
     document.getElementById("copyCount")
     .innerText = copies;
 }
+
 function makeCall (name, number){
     if (coins <20){
         alert("Not enough coins! You need 20 coins to call.");
@@ -39,6 +39,7 @@ function makeCall (name, number){
     document.getElementById("historyList")
     .appendChild(li);
 }
+
 function clearHistory (){
     document.getElementById("historyList")
     .innerHTML ="";
